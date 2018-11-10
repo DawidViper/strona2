@@ -1,0 +1,79 @@
+<!DOCTYPE html> <html class="no-js responsivelayout" lang="de"> <head> <script>
+		document.documentElement.className = document.documentElement.className.replace(/no-js/g, 'js');
+	</script> <title>Crafty Discord Bot</title> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="generator" content="Zeta Producer 14.3.3.0, ZP14F, 04.09.2018 12:40:38"> <meta name="robots" content="index, follow"> <link rel="shortcut icon" type="image/x-icon" href="assets/stock-files/standard-favicon.ico"> <link rel="stylesheet" type="text/css" href="assets/bundle.css?v=636774513344059719"> <link rel="stylesheet" type="text/css" href="assets/bundle-print.css?v=636774513343989696" media="print"> <style>
+	.zpinfooverlay{		box-shadow: 0 0 3px #333333;		padding: 12px 2.5em 12px 12px;		position: fixed;		width: 100%;		left: 0;		bottom: 0;		box-sizing: border-box;		z-index:10;		background-color: rgba(255,255,255,0.8) !important;		color: #333333 !important;		text-align: center;		opacity: 0;		-webkit-transform: translateY(100%);		transform: translateY(100%);		transition: all 1s ease-in-out;	}	.zpinfooverlay.on{		opacity: 1;		-webkit-transform: translateY(0);		transform: translateY(0);	}	.zpinfooverlay.off{		display: none;		visibility: hidden;	}	.zpinfooverlay p{		margin: 0 !important;		padding: 0 !important;	}	.zpinfooverlay a.zpclose{		color: #333333 !important;		border: 1px solid #333333 !important;		text-decoration: none;		position: absolute;		top: 12px;		right: 12px;		line-height: 1;		padding: 1px 2px;	}	.zpinfooverlay a.zpclose:hover{		background-color: #333333 !important;		color: #ffffff !important;	}	.zpinfooverlay a.button{		color: #ffffff !important;		background-color: #0A92EB !important;		border: 1px solid #0A92EB !important;		margin: 4px 0 !important;		padding: 0 !important;	}	.zpinfooverlay a.button:hover{		color: #0A92EB !important;		background-color: #ffffff !important;		border: 1px solid #0A92EB !important;		margin: 4px 0 !important;		padding: 0 !important;	}	.zpinfooverlay img.zplogo{		float: right !important;		margin-left: 20px !important;		margin-bottom: 20px !important;	}
+</style> <script type="text/javascript" src="assets/bundle.js?v=636774513344059719"></script> <script>
+			function search1(){
+				if (document.forms.searchengine1.q.value.length == 0) {
+					alert("Bitte geben Sie einen Suchbegriff ein.");
+					return false;
+				}
+			}
+		</script> </head> <body id="swiss-responsive" class="notouch"> <a id="top"></a> <div id="wrapper"> <div id="framebox"> <div id="topline"> <div id="webdescription"> <div id="logo"><a href="index.html"><img src="assets/logo-black.png" width="172" height="46" alt="index.html"></a></div> <div id="webtext"> <div id="webname"><a href="index.html">craftybot.glitch.me</a></div> </div> <div class="clearx"></div> </div> </div> <div id="sidebar"> <a href="#" id="mobilenavtoggle" class="tabletonly" aria-label="Menü ein-/ausblenden">Menü</a> <div id="sidebarinner"> <div class="newsbox noprint submenu"> <div id="subnavbar" class="clearbefore"> <ul data-trianglemode="true" class="submenu touchhovermenu clickhovermenu"> <li class="active"> <a class="active" href="index.html">Crafty Discord Bot</a> </li> </ul> </div> </div> <div id="search" class="sidebarmodule sidebargradient"><form id="searchform" name="searchengine1" onsubmit="return search1()" action="suche.html" method="get"><fieldset id="searchfieldset"><input id="searchfield" type="text" name="q" value="Suchbegriff" onfocus="if(this.value=='Suchbegriff'){this.value=''}" onblur="if(this.value==''){this.value='Suchbegriff'}"><input id="searchbutton" type="image" name="submit" src="assets/stock-images/magnifier.png" alt="searchbutton"></fieldset></form></div> </div> </div> <div id="mainbar"> <div id="page_title"></div> <div id="pageheader"> </div> <div id="content" class="fullwidth"> <div class="zparea zpgrid" data-numcolumns="" data-areaname="Standard"> <div class="zpContainer "> <div class="zpRow standard "><div class="zpRowInner"> <div class="zpColumn odd zpColumnWidth1 c12" style=" "> <div class="zpColumnItem"> <div id="a1384" data-articleid="1384" class="articlearea zpwText"> <h2>About Crafty</h2> </div> </div> </div> </div></div> </div> </div> <script>
+	var thezpinfooverlay = '\
+	<div class="zpinfooverlay" id="zpinfooverlay">  \
+		<a class="zpclose" title="Schließen / Close" href="#off">✕</a>\
+		<p>Ohne Vorkenntnisse eigene Website erstellen. <a target="zp" href="https://www.zeta-producer.com/de/index.html?utm_source=App&utm_medium=banner&utm_campaign=Start-Page-Banner" class="button"><span>Jetzt kostenlos testen</span></a></p>\
+	</div>\
+	';
+		  
+	$z(document).ready(function () {	
+		$z("#zpinfooverlay").remove();
+		$z("body").append(thezpinfooverlay);
+		setTimeout(function() {
+			var overlayheight= $z("#zpinfooverlay").outerHeight();
+			// in case we have an Info-Banner on the bottom, slide it up together with the overlay
+			$z(".alertbanner.bottom").css("transition", "all 1s ease-in-out").css("bottom", overlayheight+"px");
+			$z("body").css("padding-bottom", overlayheight+"px");
+			$z("#zpinfooverlay").addClass("on");
+		}, 5000);
+
+		$z("#zpinfooverlay a.zpclose").click(function(e){
+			$z("#zpinfooverlay").addClass("off");
+			// in case we have an Info-Banner on the bottom, slide it down again
+			$z(".alertbanner.bottom").css("bottom", "0");
+			e.preventDefault();
+			return false;
+		});
+	});
+</script> <div class="clearx"></div> </div> </div> </div> <div id="footer"> <div id="footerinfo"> © 2018 craftybot.glitch.me. <a href="https://www.zeta-producer.com" class="zp">Website erstellt mit Zeta Producer CMS</a> </div> <div id="xmenu" class=""> <a href="seite-nicht-gefunden.html">Startseite</a> <a href="seite-nicht-gefunden.html">Kontakt</a> <a href="seite-nicht-gefunden.html">Impressum</a> </div> </div> </div> <script>	
+		$z(document).ready(function(){
+			// Reset Font Size
+			var originalFontSize = $z('body').css('font-size');
+				$z(".resetFont").click(function(){
+				$z('body').css('font-size', originalFontSize);
+			});
+			// Increase Font Size
+			$z(".increaseFont").click(function(){
+				var currentFontSize = $z('body').css('font-size');
+				var currentFontSizeNum = parseFloat(currentFontSize, 10);
+				var newFontSize = currentFontSizeNum*1.2;
+				$z('body').css('font-size', newFontSize);
+				scaleSidebar(30);
+				return false;
+			});
+			// Decrease Font Size
+			$z(".decreaseFont").click(function(){
+				var currentFontSize = $z('body').css('font-size');
+				var currentFontSizeNum = parseFloat(currentFontSize, 10);
+				var newFontSize = currentFontSizeNum*0.8;
+				$z('body').css('font-size', newFontSize);
+				scaleSidebar(30);
+				return false;
+			});
+			
+			// switches the Mobile Navigation-Menu on/off, when "Menu" link is clicked.
+			$z("a#mobilenavtoggle").on("click", function(e){
+				$z("#sidebarinner").slideToggle(300, function (){
+					$z("#sidebarinner, a#mobilenavtoggle").toggleClass("on");
+					//clear inline styles set by "slideToggle" so the don't stick around e.g. after window enlargement or orientation change
+					$z(this).css("display",""); 	
+				});
+			});	
+		});
+	</script> 
+<!--
+* Layout: Swiss Responsive by StS
+* $Id: default.html 61763 2018-06-01 12:19:09Z sseiz $
+-->
+ </body> </html>

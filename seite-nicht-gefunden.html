@@ -1,0 +1,50 @@
+<!DOCTYPE html> <html class="no-js responsivelayout" lang="de"> <head> <script>
+		document.documentElement.className = document.documentElement.className.replace(/no-js/g, 'js');
+	</script> <title>Seite nicht gefunden</title> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="generator" content="Zeta Producer 14.3.3.0, ZP14F, 04.09.2018 12:40:38"> <meta name="robots" content="index, follow"> <link rel="shortcut icon" type="image/x-icon" href="assets/stock-files/standard-favicon.ico"> <link rel="stylesheet" type="text/css" href="assets/bundle.css?v=636774513344059719"> <link rel="stylesheet" type="text/css" href="assets/bundle-print.css?v=636774513343989696" media="print"> <script type="text/javascript" src="assets/bundle.js?v=636774513344059719"></script> <script>
+			function search1(){
+				if (document.forms.searchengine1.q.value.length == 0) {
+					alert("Bitte geben Sie einen Suchbegriff ein.");
+					return false;
+				}
+			}
+		</script> </head> <body id="swiss-responsive" class="notouch"> <a id="top"></a> <div id="wrapper"> <div id="framebox"> <div id="topline"> <div id="webdescription"> <div id="logo"><a href="index.html"><img src="assets/logo-black.png" width="172" height="46" alt="index.html"></a></div> <div id="webtext"> <div id="webname"><a href="index.html">craftybot.glitch.me</a></div> </div> <div class="clearx"></div> </div> </div> <div id="sidebar"> <a href="#" id="mobilenavtoggle" class="tabletonly" aria-label="Menü ein-/ausblenden">Menü</a> <div id="sidebarinner"> <div class="newsbox noprint submenu"> <div id="subnavbar" class="clearbefore"> <ul data-trianglemode="true" class="submenu touchhovermenu clickhovermenu"> <li> <a href="index.html">Crafty Discord Bot</a> </li> </ul> </div> </div> <div id="search" class="sidebarmodule sidebargradient"><form id="searchform" name="searchengine1" onsubmit="return search1()" action="suche.html" method="get"><fieldset id="searchfieldset"><input id="searchfield" type="text" name="q" value="Suchbegriff" onfocus="if(this.value=='Suchbegriff'){this.value=''}" onblur="if(this.value==''){this.value='Suchbegriff'}"><input id="searchbutton" type="image" name="submit" src="assets/stock-images/magnifier.png" alt="searchbutton"></fieldset></form></div> </div> </div> <div id="mainbar"> <div id="page_title"></div> <div id="pageheader"> </div> <div id="content" class="fullwidth"> <div class="zparea zpgrid" data-numcolumns="" data-areaname="Standard"> <div class="zpContainer "> <div class="zpRow standard "><div class="zpRowInner"> <div class="zpColumn odd zpColumnWidth1 c12" style=" "> <div class="zpColumnItem"> <div id="a1377" data-articleid="1377" class="articlearea zpwText"> <h1 style="text-align:left;">Seite nicht gefunden</h1> <p>Die von Ihnen aufgerufene Seite ist leider nicht verfügbar.</p> </div> </div> </div> </div></div> </div> </div> <div class="clearx"></div> </div> </div> </div> <div id="footer"> <div id="footerinfo"> © 2018 craftybot.glitch.me. <a href="https://www.zeta-producer.com" class="zp">Website erstellt mit Zeta Producer CMS</a> </div> <div id="xmenu" class=""> <a href="seite-nicht-gefunden.html">Startseite</a> <a href="seite-nicht-gefunden.html">Kontakt</a> <a href="seite-nicht-gefunden.html">Impressum</a> </div> </div> </div> <script>	
+		$z(document).ready(function(){
+			// Reset Font Size
+			var originalFontSize = $z('body').css('font-size');
+				$z(".resetFont").click(function(){
+				$z('body').css('font-size', originalFontSize);
+			});
+			// Increase Font Size
+			$z(".increaseFont").click(function(){
+				var currentFontSize = $z('body').css('font-size');
+				var currentFontSizeNum = parseFloat(currentFontSize, 10);
+				var newFontSize = currentFontSizeNum*1.2;
+				$z('body').css('font-size', newFontSize);
+				scaleSidebar(30);
+				return false;
+			});
+			// Decrease Font Size
+			$z(".decreaseFont").click(function(){
+				var currentFontSize = $z('body').css('font-size');
+				var currentFontSizeNum = parseFloat(currentFontSize, 10);
+				var newFontSize = currentFontSizeNum*0.8;
+				$z('body').css('font-size', newFontSize);
+				scaleSidebar(30);
+				return false;
+			});
+			
+			// switches the Mobile Navigation-Menu on/off, when "Menu" link is clicked.
+			$z("a#mobilenavtoggle").on("click", function(e){
+				$z("#sidebarinner").slideToggle(300, function (){
+					$z("#sidebarinner, a#mobilenavtoggle").toggleClass("on");
+					//clear inline styles set by "slideToggle" so the don't stick around e.g. after window enlargement or orientation change
+					$z(this).css("display",""); 	
+				});
+			});	
+		});
+	</script> 
+<!--
+* Layout: Swiss Responsive by StS
+* $Id: default.html 61763 2018-06-01 12:19:09Z sseiz $
+-->
+ </body> </html>
